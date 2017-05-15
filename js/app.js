@@ -4,5 +4,6 @@ angular.module('heyhaemin', [])
 	// $scope.portfolio = false;
 	$scope.intro = false;
 	$scope.doggoClick = false;
+	$scope.namu_heart = false;
 
 }]);
