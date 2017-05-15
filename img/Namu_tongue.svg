@@ -1,4 +1,4 @@
-<header ng-controller="mainController"><nav><div class="nav-wrapper"><a class="brand-logo center"><div class="img-wrapper"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
@@ -9,13 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="100%"
-   height="100%"
+   width="200mm"
+   height="200mm"
    viewBox="0 0 200 200"
    version="1.1"
    id="svg3814"
    inkscape:version="0.92.1 r"
-   sodipodi:docname="namu_savage.svg">
+   sodipodi:docname="Namu_tongue.svg">
   <defs
      id="defs3808">
     <style
@@ -45,7 +45,7 @@
      inkscape:cx="801.57902"
      inkscape:cy="-302.03183"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer16"
+     inkscape:current-layer="layer5"
      showgrid="false"
      inkscape:window-width="1440"
      inkscape:window-height="811"
@@ -617,11 +617,10 @@
      inkscape:groupmode="layer"
      id="layer15"
      inkscape:label="namu_sweat"
-     transform="translate(0,-139.40689)"
-     style="display:none">
+     transform="translate(0,-139.40689)">
     <g
        id="g16136"
-       transform="translate(129.58441,-125.91565)">
+       transform="translate(644.3335,41.014344)">
       <path
          style="clip-rule:evenodd;fill:#ffffff;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
          inkscape:connector-curvature="0"
@@ -694,7 +693,7 @@
      transform="translate(0,-139.40689)">
     <g
        id="g16154"
-       transform="translate(563.85366,-222.29957)">
+       transform="translate(541.70202,64.534054)">
       <path
          style="clip-rule:evenodd;fill:#ffffff;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
          inkscape:connector-curvature="0"
@@ -737,13 +736,13 @@
       <path
          style="clip-rule:evenodd;fill:#000000;fill-rule:nonzero;stroke-width:0.02540019;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
          inkscape:connector-curvature="0"
-         class="fil6 eye"
+         class="fil6"
          d="m -481.04406,464.3156 c 0,-2.76862 -2.26061,-5.02924 -5.02923,-5.02924 -2.76862,0 -5.02924,2.26062 -5.02924,5.02924 0,2.76862 2.26062,5.02924 5.02924,5.02924 2.76862,0 5.02923,-2.26062 5.02923,-5.02924 z"
          id="path4664-6" />
       <path
          style="clip-rule:evenodd;fill:#000000;fill-rule:nonzero;stroke-width:0.02540019;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
          inkscape:connector-curvature="0"
-         class="fil6 eye"
+         class="fil6"
          d="m -444.03598,464.3156 c 0,-2.76862 -2.26061,-5.02924 -5.02924,-5.02924 -2.76862,0 -5.02923,2.26062 -5.02923,5.02924 0,2.76862 2.26061,5.02924 5.02923,5.02924 2.76863,0 5.02924,-2.26062 5.02924,-5.02924 z"
          id="path4666-4" />
       <path
@@ -920,12 +919,11 @@
      inkscape:groupmode="layer"
      id="layer14"
      inkscape:label="namu_oh"
-     transform="translate(0,-139.40689)"
-     style="display:none">
+     transform="translate(0,-139.40689)">
     <g
        style="display:inline"
        id="g8245"
-       transform="translate(239.95346,-129.69541)">
+       transform="translate(618.67563,37.807094)">
       <path
          style="clip-rule:evenodd;fill:#ffffff;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
          inkscape:connector-curvature="0"
@@ -983,8 +981,7 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="namu_tongue"
-     transform="translate(0,-139.40689)"
-     style="display:none">
+     transform="translate(0,-139.40689)">
     <g
        style="display:inline"
        id="g8152"
@@ -1188,7 +1185,3 @@
     </g>
   </g>
 </svg>
-</div></a><a class="button-collapse" href="#" data-activates="mobile-demo"><i class="material-icons" style="color:#444;">menu</i></a><ul class="hide-on-med-and-down" id="nav-mobile"><div class="nav-text img-wrapper"><li><a ng-click="me = true; portfolio = false">Me</a></li><li><a ng-click="portfolio = true; me = false">Projects</a></li><li><a href="#">Contact</a></li></div></ul></div></nav></header><ul class="side-nav" id="mobile-demo"><li><a href="#">Me</a></li><li><a href="#">Projects</a></li><li><a href="#">Contact<!--.nav-content(class='hide-on-med-and-down')ul(class='tabs tabs-transparent')
-	li.tab: a(href='#') Me
-	li.tab: a(href='#') Projects
-	li.tab: a(href='#') Contact--></a></li></ul>
