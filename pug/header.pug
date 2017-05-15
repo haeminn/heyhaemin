@@ -1,4 +1,4 @@
-header(ng-controller='mainController')
+header
 	nav
 		.nav-wrapper
 			a.brand-logo.center
@@ -13,12 +13,12 @@ header(ng-controller='mainController')
 					li: a(ng-click='portfolio = true; me = false') Projects
 					li: a(href='#') Contact
 
-ul(class='side-nav' id='mobile-demo')
-	li: a(href='#') Me
-	li: a(href='#') Projects
-	li: a(href='#') Contact
-		//.nav-content(class='hide-on-med-and-down')
-			ul(class='tabs tabs-transparent')
-				li.tab: a(href='#') Me
-				li.tab: a(href='#') Projects
-				li.tab: a(href='#') Contact
+	ul(class='side-nav' id='mobile-demo')
+		li: a(href='#') Me
+		li: a(href='#') Projects
+		li: a(href='#') Contact
+			//.nav-content(class='hide-on-med-and-down')
+				ul(class='tabs tabs-transparent')
+					li.tab: a(href='#') Me
+					li.tab: a(href='#') Projects
+					li.tab: a(href='#') Contact

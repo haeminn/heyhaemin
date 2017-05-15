@@ -1,41 +1,16 @@
-html(ng-app='heyhaemin')
+html
 	head
 		title heyhaemin
 		link(rel='stylesheet' href='./css/index.css')
 		link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
 		link(href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet")
-
-	header(ng-controller='mainController')
-	nav
-		.nav-wrapper
-			a.brand-logo.center
-				.img-wrapper
-					include ../dist/img/namu_savage.svg
-			a(href="#" data-activates='mobile-demo' class='button-collapse')
-				i.material-icons(style='color:#444;') menu
-
-			ul(id='nav-mobile' class='hide-on-med-and-down')
-				.nav-text.img-wrapper
-					li: a(ng-click= 'me = true; portfolio = false') Me
-					li: a(ng-click='portfolio = true; me = false') Projects
-					li: a(href='#') Contact
-
-	ul(class='side-nav' id='mobile-demo')
-		li: a(href='#') Me
-		li: a(href='#') Projects
-		li: a(href='#') Contact
-			//.nav-content(class='hide-on-med-and-down')
-				ul(class='tabs tabs-transparent')
-					li.tab: a(href='#') Me
-					li.tab: a(href='#') Projects
-					li.tab: a(href='#') Contact		
-	body(ng-controller='mainController')
-		//include header.pug
+		
+	body(ng-app='heyhaemin' ng-controller='mainController')
+		include header.pug
 		.div(ng-show='portfolio')
 			include portfolio.pug
 		.div(ng-show='me')
-			include me.pug	
-		//h1 Hello I'm a good doggo :3
+			include me.pug
 
 
 
