@@ -7,10 +7,8 @@ html
 		
 	body(ng-app='heyhaemin' ng-controller='mainController')
 		include header.pug
-		.div(ng-show='portfolio')
-			include portfolio.pug
-		.div(ng-show='me')
-			include me.pug
+		.div(style='padding-top:50px; height:450px;' ng-show='intro')
+			include intro.pug
 
 
 
