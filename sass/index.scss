@@ -120,4 +120,14 @@ left: 49%;
 //left: 628px;
 }
 
+#marquee-wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+.marquee {
+ white-space: nowrap;
+ -webkit-animation: rightThenLeft 10s linear;
+
+}
+
 

@@ -1,22 +1,28 @@
 header
 	nav
 		.nav-wrapper
-			a.brand-logo.center(href='#' ng-click= 'intro=true;')
+			a.brand-logo.center(href='#' ng-click= 'intro=true; doggoClick=true;')
 				div(style='padding-top:50px;')
 					include ../dist/img/namu_smile.svg
+					div(id='marquee-wrapper' ng-show='!doggoClick')
+						marquee(behavior="alternate")
+							span(class="marquee")
+								h5 Click the doggo
 			a(href="#" data-activates='mobile-demo' class='button-collapse')
 				i.material-icons(style='color:#444;') menu
 
-			ul(id='nav-mobile' class='hide-on-med-and-down')
-				.nav-text.img-wrapper
-					li: a(ng-click= 'me = true; portfolio = false') Me
-					li: a(ng-click='portfolio = true; me = false') Projects
-					li: a(href='#') Contact
+			//- ul(id='nav-mobile' class='hide-on-med-and-down')
+			//- 	.nav-text.img-wrapper
+			//- 		li: a(ng-click= 'me = true; portfolio = false') About Haemin
+			//- 		li: a(ng-click='portfolio = true; me = false') Haemin's Projects
+			//- 		li: a(href='#') ~Funzies~
+			//- 		li: a(href='#') Contact her
 
 	ul(class='side-nav' id='mobile-demo')
-		li: a(href='#') Me
-		li: a(href='#') Projects
-		li: a(href='#') Contact
+		li: a(href='#') About Haemin
+		li: a(href='#') Haemin's projects
+		li: a(href='#') Funzies
+		li: a(href='#') Contact her
 			//.nav-content(class='hide-on-med-and-down')
 				ul(class='tabs tabs-transparent')
 					li.tab: a(href='#') Me

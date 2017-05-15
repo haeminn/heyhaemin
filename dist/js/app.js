@@ -3,5 +3,6 @@ angular.module('heyhaemin', [])
 	// $scope.me = false;
 	// $scope.portfolio = false;
 	$scope.intro = false;
+	$scope.doggoClick = false;
 
 }]);
