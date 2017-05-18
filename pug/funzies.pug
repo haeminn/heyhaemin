@@ -1,20 +1,12 @@
 html
 	head
-		title heyhaemin
-		base(href="/")
 		link(rel='stylesheet' href='./css/index.css')
 		link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
 		link(href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet")
 
-		
-	body(ng-app='heyhaemin' ng-controller='mainController')
-		include header.pug
-		.div(style='padding-top:50px; height:450px;' ng-show='intro' ng-cloak)
-			include intro.pug
-
-
-
-
+	body(ng-app='heyhaemin' ng-controller='mainController' style="background-image: url('https://media.giphy.com/media/l2QZW6wps81QYSGmQ/giphy.gif');background-repeat: repeat;")
+		//include header.pug
+		h1 hi
 
 
 	script(src='https://code.jquery.com/jquery-2.2.4.min.js')
@@ -28,4 +20,4 @@ html
 			 $(".button-collapse").sideNav({
 			 	menuWidth: 300
 			 });
-		});
+		});		

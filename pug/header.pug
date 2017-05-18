@@ -1,7 +1,7 @@
 header
 	nav
 		.nav-wrapper
-			a.brand-logo.center(ng-show='namu_heart' href='#' ng-click= 'intro=false; doggoClick=true; namu_heart=false;')
+			a.brand-logo.center(ng-show='namu_heart' href='#' ng-click= 'intro=false; doggoClick=true; namu_heart=false;' ng-cloak)
 				div(style='padding-top:50px;')
 					include ../dist/img/namu_heart.svg
 			a.brand-logo.center(ng-hide='namu_heart' href='#' ng-click= 'intro=true; doggoClick=true; namu_heart=true;')
