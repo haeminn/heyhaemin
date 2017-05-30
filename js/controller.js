@@ -13,6 +13,17 @@ angular.module('heyhaemin')
 	$scope.intro = false;
 	$scope.doggoClick = false;
 	$scope.namu_heart = false;
+	$scope.default = true;
+
+	$scope.funs = [
+		{
+			name: 'I love cooking', url: '#'
+		},
+		{
+			name: 'Fitness', url: '#'
+		}
+
+		];
 
 	$scope.funziesRoute = function()  {
 

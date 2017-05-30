@@ -8,7 +8,9 @@ html
 	body(ng-app='heyhaemin' ng-controller='mainController')
 		include header.pug
 		.div(style="background-image: url('https://media.giphy.com/media/l2QZW6wps81QYSGmQ/giphy.gif');background-repeat: repeat; height:100%;")
-			.div(style='padding-top:50px; height:450px;' ng-show='intro' ng-cloak)
+			.div(ng-show='default' ng-hide='intro' ng-cloak style='padding-top:50px;')
+				a(href='#' ng-repeat='fun in funs' style='color:white; font-size:20px;') {{fun.name}} <br>
+			.div(style='padding-top:20px; height:450px;' ng-show='intro' ng-cloak)
 				include intro.pug
 
 
