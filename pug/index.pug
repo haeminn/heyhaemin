@@ -1,33 +1,30 @@
-html
-	head
-		title heyhaemin
-		base(href="/")
-		link(rel='stylesheet' href='./css/index.css')
-		link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
-		link(href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet")
+extends include/layout.pug
 
-	
-	body(ng-app='heyhaemin' ng-controller='mainController')
-		include header.pug
-		.div(style='padding-top:50px; height:450px;' ng-show='intro' ng-cloak)
-			include intro.pug
+block main
+	include index/work.pug
+	include index/skills.pug
+	include index/about.pug
+	include index/contact.pug
 
 
-
-
-
-
-	script(src='https://code.jquery.com/jquery-2.2.4.min.js')
-	script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js')
-	script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js')
-	script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-animate.min.js')
-	script(src='./js/app.js')
-	script(src='./js/controller.js')
-	script(src='./js/config.js')
-	script(src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js")
+block scripts
 	script.
-		$(document).ready(function(){
-			 $(".button-collapse").sideNav({
-			 	menuWidth: 300
-			 });
+		document.querySelectorAll('.work-tab').forEach(function (el) {
+			el.classList.add('active');
+		});
+
+		var nav = document.getElementById('nav');
+		window.transparentNav = true;
+		window.addEventListener("scroll", function(event) { 
+			"use strict";
+			if (document.body.scrollTop >= 50 && transparentNav) {
+				nav.classList.add("nav-colored");
+				nav.classList.remove("nav-transparent");
+				transparentNav = false;
+			} 
+			else if (document.body.scrollTop == 0 && !transparentNav){
+				nav.classList.add("nav-transparent");
+				nav.classList.remove("nav-colored");
+				transparentNav = true;
+			}
 		});

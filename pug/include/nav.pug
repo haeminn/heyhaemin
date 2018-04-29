@@ -1,0 +1,19 @@
+mixin links
+	li: a.work-tab.sidenav-close(href='#work') Work
+	li: a.about-tab.sidenav-close(href='#about') About
+	li: a.contact-tab.sidenav-close(href='#contact') Contact
+
+.navbar-fixed
+	nav#nav.nav-transparent
+		.nav-wrapper
+			a.right.sidenav-trigger(href='' data-target='sidenav'): i.material-icons menu
+			
+			.container
+				.left.header-text(style='position: absolute;')
+					.text-large Haemin Park
+					.text-small Front End Developer
+				ul.right.hide-on-med-and-down
+					+links
+
+ul#sidenav.sidenav
+	+links

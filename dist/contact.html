@@ -1,0 +1,19 @@
+<html><head><title>Haemin Park</title><link rel="stylesheet" href="./css/index.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><link href="https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans|Gochi+Hand" rel="stylesheet"/><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/></head><body><header><div class="navbar-fixed"><nav class="nav-transparent" id="nav"><div class="nav-wrapper"><a class="right sidenav-trigger" href="" data-target="sidenav"><i class="material-icons">menu</i></a><div class="container"><div class="left header-text" style="position: absolute;"><div class="text-large">Haemin Park</div><div class="text-small">Front End Developer</div></div><ul class="right hide-on-med-and-down"><li><a class="work-tab" href="/">Work</a></li><li><a class="about-tab" href="/about">About</a></li><li><a class="contact-tab" href="/contact">Contact</a></li></ul></div></div></nav></div><ul class="sidenav" id="sidenav"><li><a class="work-tab" href="/">Work</a></li><li><a class="about-tab" href="/about">About</a></li><li><a class="contact-tab" href="/contact">Contact</a></li></ul></header><main><div class="container"><h1>contact page</h1><input type="text"/><a class="btn btn-secondary btn-round">hello</a></div></main><footer><div class="container"><p>&copy; 2018 Haemin Park</p></div></footer><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script><script>document.querySelectorAll('.contact-tab').forEach(function (el) {
+	el.classList.add('active');
+});</script><script>M.Sidenav.init(document.querySelector('.sidenav'), { edge: 'right' });
+
+var nav = document.getElementById('nav');
+window.transparentNav = true;
+window.addEventListener("scroll", function(event) { 
+	"use strict";
+	if (document.body.scrollTop >= 5 && transparentNav) {
+		nav.classList.add("nav-colored");
+		nav.classList.remove("nav-transparent");
+		transparentNav = false;
+	} 
+	else if (document.body.scrollTop == 0 && !transparentNav){
+		nav.classList.add("nav-transparent");
+		nav.classList.remove("nav-colored");
+		transparentNav = true;
+	}
+});</script></body></html>

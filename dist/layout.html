@@ -1,0 +1,93 @@
+<html><head><title>Respondent</title><link rel="stylesheet" href="./css/index.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,900" type="text/css"/><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/></head><body><header><div class="navbar-fixed"><nav class="nav-transparent" id="nav"><div class="nav-wrapper"><a class="brand-logo" href="/" style="margin: 10px 15px"><img src="https://s3.amazonaws.com/respondentinc-assets/images/respondent_logo_lb_230_v3.png"/></a><a class="sidenav-trigger" href="" data-target="sidenav"><i class="material-icons">menu</i></a><ul class="hide-on-med-and-down"><li><a>For Respondents</a></li><li><a class="feature-tab" href="/features">Features</a></li><li><a>Pricing</a></li><li><a>Customers</a></li><li><a>Blog</a></li></ul><div class="btn btn-primary btn-round outline hide-on-small-and-down" style="margin: 10px 15px">Log in</div></div></nav></div><ul class="sidenav" id="sidenav"><li><a>For Respondents</a></li><li><a class="feature-tab" href="/features">Features</a></li><li><a>Pricing</a></li><li><a>Customers</a></li><li><a>Blog</a></li></ul></header><main></main><footer><div class="container"><div class="row"><div class="col s6 l2"><label>Company</label><ul><li><a>About us</a></li><li><a href="https://blog.respondent.io">Blog</a></li><li><a href="https://intercom.help/respondent">Knowledge base</a></li><li><a href="https://angel.co/respondent-io/jobs">We are hiring</a></li></ul></div><div class="col s6 l2"><label>Researchers</label><ul><li><a>Pricing</a></li><li><a>Case Studies</a></li><li><a>Log In</a></li></ul></div><div class="col s6 l2"><label>Respondents</label><ul><li><a>How it Works</a></li><li><a>Sign Up</a></li><li><a>Log In</a></li></ul></div><div class="col l4"></div></div></div></footer><script src="js/global.js"></script><script src="js/anime.min.js"></script><script src="js/sidenav.js"></script><script src="js/parallax.js"></script><script>M.Sidenav.init(document.querySelector('.sidenav'));
+
+var nav = document.getElementById('nav');
+window.transparentNav = true;
+window.addEventListener("scroll", function(event) { 
+	"use strict";
+	if (document.body.scrollTop >= 5 && transparentNav) {
+		nav.classList.add("nav-colored");
+		nav.classList.remove("nav-transparent");
+		transparentNav = false;
+	} 
+	else if (document.body.scrollTop == 0 && !transparentNav){
+		nav.classList.add("nav-transparent");
+		nav.classList.remove("nav-colored");
+		transparentNav = true;
+	}
+});
+
+(function(){
+	function VerticalTimeline( element ) {
+		this.element = element;
+		this.blocks = this.element.getElementsByClassName("js-cd-block");
+		this.images = this.element.getElementsByClassName("js-cd-img");
+		this.contents = this.element.getElementsByClassName("js-cd-content");
+		this.offset = 0.8;
+		this.hideBlocks();
+	};
+
+	VerticalTimeline.prototype.hideBlocks = function() {
+		//hide timeline blocks which are outside the viewport
+		if ( !"classList" in document.documentElement ) {
+			return;
+		}
+		var self = this;
+		for( var i = 0; i < this.blocks.length; i++) {
+			(function(i){
+				if( self.blocks[i].getBoundingClientRect().top > window.innerHeight*self.offset ) {
+					self.images[i].classList.add("cd-is-hidden"); 
+					self.contents[i].classList.add("cd-is-hidden"); 
+				}
+			})(i);
+		}
+	};
+
+	VerticalTimeline.prototype.showBlocks = function() {
+		if ( ! "classList" in document.documentElement ) {
+			return;
+		}
+		var self = this;
+		for( var i = 0; i < this.blocks.length; i++) {
+			(function(i){
+				if( self.contents[i].classList.contains("cd-is-hidden") && self.blocks[i].getBoundingClientRect().top <= window.innerHeight*self.offset ) {
+					// add bounce-in animation
+					self.images[i].classList.add("cd-timeline__img--bounce-in");
+					self.contents[i].classList.add("cd-timeline__content--bounce-in");
+					self.images[i].classList.remove("cd-is-hidden");
+					self.contents[i].classList.remove("cd-is-hidden");
+				}
+			})(i);
+		}
+	};
+
+	var verticalTimelines = document.getElementsByClassName("js-cd-timeline"),
+		verticalTimelinesArray = [],
+		scrolling = false;
+	if( verticalTimelines.length > 0 ) {
+		for( var i = 0; i < verticalTimelines.length; i++) {
+			(function(i){
+				verticalTimelinesArray.push(new VerticalTimeline(verticalTimelines[i]));
+			})(i);
+		}
+
+		//show timeline blocks on scrolling
+		window.addEventListener("scroll", function(event) {
+			if( !scrolling ) {
+				scrolling = true;
+				(!window.requestAnimationFrame) ? setTimeout(checkTimelineScroll, 250) : window.requestAnimationFrame(checkTimelineScroll);
+			}
+		});
+	}
+
+	function checkTimelineScroll() {
+		verticalTimelinesArray.forEach(function(timeline){
+			timeline.showBlocks();
+		});
+		scrolling = false;
+	};
+})();
+
+//- window.scrollTo({
+//- 	top: 0,
+//- 	behavior: "smooth"
+//- });</script></body></html>

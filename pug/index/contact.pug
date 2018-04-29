@@ -1,0 +1,22 @@
+#contact.section.scrollspy: .container
+	.row
+		.col.s12.l6
+			h1 Lets work together!
+			.links
+				a(href='https://www.linkedin.com/in/haeminp' target='_blank'): img(src='img/linkedin.svg')
+				a(href='https://github.com/haeminn' target='_blank'): img(src='img/github.svg')
+
+		.col.s12.l6
+			form(action='https://formspree.io/haeminp@umich.edu' method='POST')
+				label Name
+				input(type='text' name='name')
+
+				label Email
+				input(type='email' name='_replyto')
+
+				input(type='text' name='_gotcha' style='display:none')
+
+				label Message
+				textarea(name='message')
+
+				button.btn.btn-round.btn-secondary(type='submit' value='Send') Send

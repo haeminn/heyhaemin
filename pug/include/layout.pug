@@ -1,0 +1,46 @@
+html
+	head
+		title Haemin Park
+		link(rel='stylesheet' href='./css/index.css')
+		link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
+		//-link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,700,900' type='text/css')
+		link(href="https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans|Gochi+Hand" rel="stylesheet")
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+
+	body
+		header
+			include nav.pug
+			
+		main
+			block main
+
+		footer
+			include footer.pug
+
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js')
+		
+		script.
+			M.Sidenav.init(document.querySelector('.sidenav'), { edge: 'right' });
+
+			var nav = document.getElementById('nav');
+			window.transparentNav = true;
+			window.addEventListener("scroll", function(event) { 
+				"use strict";
+				if (document.body.scrollTop >= 5 && transparentNav) {
+					nav.classList.add("nav-colored");
+					nav.classList.remove("nav-transparent");
+					transparentNav = false;
+				} 
+				else if (document.body.scrollTop == 0 && !transparentNav){
+					nav.classList.add("nav-transparent");
+					nav.classList.remove("nav-colored");
+					transparentNav = true;
+				}
+			});
+
+			document.querySelectorAll('.scrollspy').forEach(function (elem) {
+				M.ScrollSpy.init(elem, { scrollOffset: 100 });
+			})
+
+		block scripts
