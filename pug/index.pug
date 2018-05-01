@@ -5,26 +5,3 @@ block main
 	include index/skills.pug
 	include index/about.pug
 	include index/contact.pug
-
-
-block scripts
-	script.
-		document.querySelectorAll('.work-tab').forEach(function (el) {
-			el.classList.add('active');
-		});
-
-		var nav = document.getElementById('nav');
-		window.transparentNav = true;
-		window.addEventListener("scroll", function(event) { 
-			"use strict";
-			if (document.body.scrollTop >= 50 && transparentNav) {
-				nav.classList.add("nav-colored");
-				nav.classList.remove("nav-transparent");
-				transparentNav = false;
-			} 
-			else if (document.body.scrollTop == 0 && !transparentNav){
-				nav.classList.add("nav-transparent");
-				nav.classList.remove("nav-colored");
-				transparentNav = true;
-			}
-		});

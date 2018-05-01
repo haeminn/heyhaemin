@@ -7,7 +7,7 @@ $secondary-dark: #0ea26c;
 $dark: #303e56;
 $grey: #595f72;
 
-$btn-height: 36px;
+$btn-height: 42px;
 
 body {
 	background: #fff;
@@ -153,7 +153,7 @@ footer {
 		color: $grey;
 	}
 	p {
-		font-size: 10px;
+		font-size: 12px;
 	}
 }
 
@@ -187,7 +187,7 @@ input, textarea {
 }
 
 textarea {
-	height: 64px;
+	height: 150px;
 }
 
 .btn {
@@ -260,10 +260,6 @@ h5 {
 	margin: 120px 0px;
 }
 
-.hover {
-	//border: solid 1px grey;
-}
-
 .hover figure img {
 
 	opacity: 1;
@@ -273,6 +269,18 @@ h5 {
 
 .hover figure:hover img {
 	opacity: .5;
+}
+
+.modal {
+	h5 {
+		font-family: 'Open Sans', sans-serif;
+		color: $grey;
+		font-weight: bold;
+	}
+	p {
+		line-height: 1.5em;
+		margin: 25px auto;
+	}
 }
 
 @media only screen and (min-width: 993px){
