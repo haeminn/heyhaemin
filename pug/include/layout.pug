@@ -8,6 +8,7 @@ html
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		include tracking.pug
+
 	body
 		header
 			include nav.pug
@@ -19,8 +20,6 @@ html
 			include footer.pug
 
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js')
-		
-		
 		script.
 			M.Sidenav.init(document.querySelector('.sidenav'), { edge: 'right' });
 
@@ -30,15 +29,15 @@ html
 			window.addEventListener("scroll", function(event) { 
 				"use strict";
 				if (document.body.scrollTop >= 5 && transparentNav) {
-					nav.classList.add("nav-colored");
+					nav.classList.add("nav-collapsed");
 					main.classList.add("shorty");
-					nav.classList.remove("nav-transparent");
+					nav.classList.remove("nav-expanded");
 					transparentNav = false;
 				} 
 				else if (document.body.scrollTop == 0 && !transparentNav){
-					nav.classList.add("nav-transparent");
+					nav.classList.add("nav-expanded");
 					main.classList.remove("shorty");
-					nav.classList.remove("nav-colored");
+					nav.classList.remove("nav-collapsed");
 					transparentNav = true;
 				}
 			});

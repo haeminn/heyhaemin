@@ -37,6 +37,7 @@ header {
 		* {
 			transition: 0.4s all;
 		}
+
 		.header-text {
 			color: $grey;
 			.text-large {
@@ -44,39 +45,45 @@ header {
 			}
 		}
 
-		&.nav-transparent {
+		&.nav-expanded {
 			height: 300px;
 			background-color: #ffffff;
-			//background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b77ab' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 			background-size: 20%;
+
 			img {
 				display: none;
 			}
+
 			.header-text {
 				padding: 80px;
+
 				.text-large {
 					font-size: 64px;
 				}
+
 				.text-small {
 					font-size: 24px;
 				}
 			}
 		}
-		&.nav-colored {
+
+		&.nav-collapsed {
 			background: white;
 			background-color: #ffffff;
-			//background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b77ab' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 			background-size: 20%;
+
 			img {
 				vertical-align: middle;
 				margin-right: 10px;
 				width: 30px;
 
 			}
+
 			.header-text {
 				.text-large {
 					display: inline-block;
 				}
+
 				.text-small {
 					opacity: 0;
 				}
@@ -86,11 +93,14 @@ header {
 		.sidenav-trigger {
 			color: $grey;
 		}
+
 		ul {
 			text-align: center;
+
 			li {
 				display: inline;
 				float: none;
+
 				a {
 					display: inline-block;
 					position: relative;
@@ -103,6 +113,7 @@ header {
 						color: $primary-dark;
 						transform: scale(1.05);
 					}
+
 					&:after {    
 					  background: none repeat scroll 0 0 transparent;
 					  bottom: 10;
@@ -115,6 +126,7 @@ header {
 					  transition: width 0.3s ease 0s, left 0.3s ease 0s;
 					  width: 0;
 					}
+
 					&:hover:after, &.active:after { 
 					  width: 100%; 
 					  left: 0; 
@@ -123,22 +135,25 @@ header {
 				}
 			}
 		}
-	}
+	} // end of nav
+
 	.btn {
 		position: absolute;
 		top: 5px;
 		right: 15px;
 	}
-}
+} // end of header
 
 
 main {
 	transition: 0.4s all;
 	margin-top: 300px;
 	flex: 1 0 auto;
+
 	p {
 		line-height: 1.75em;
 	}
+
 	&.shorty{
 		margin-top: 200px;
 	}
@@ -146,12 +161,15 @@ main {
 
 footer {
 	padding: 20px 0px 20px 0px;
+
 	label {
 		color: $primary;
 	}
+
 	a {
 		color: $grey;
 	}
+
 	p {
 		font-size: 12px;
 	}
@@ -204,10 +222,12 @@ textarea {
 
 .btn-primary {
 	background: $primary;
+
 	&:hover{
 		background: $primary-dark;
 		box-shadow: none;
 	}
+
 	&.outline {
 		background: transparent;
 		line-height: $btn-height - 4px;
@@ -218,10 +238,12 @@ textarea {
 
 .btn-secondary {
 	background: $secondary;
+
 	&:hover{
 		background: $secondary-dark;
 		box-shadow: none;
 	}
+
 	&.outline {
 		background: transparent;
 		line-height: $btn-height - 4px;
@@ -244,10 +266,10 @@ h5 {
 	color: $primary;
 }
 
-
 .links {
 	a {
 		filter: brightness(0) opacity(25%);
+
 		img {
 			width: 64px;
 			height: 64px;
@@ -261,7 +283,6 @@ h5 {
 }
 
 .hover figure img {
-
 	opacity: 1;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
@@ -277,6 +298,7 @@ h5 {
 		color: $grey;
 		font-weight: bold;
 	}
+
 	p {
 		line-height: 1.5em;
 		margin: 25px auto;
@@ -290,25 +312,31 @@ h5 {
 }
 
 @media only screen and (max-width: 660px) {
-	header nav.nav-transparent {
+	header nav.nav-expanded {
 		height: 100px;
 	}
-	header nav.nav-transparent .header-text {
+
+	header nav.nav-expanded .header-text {
 		padding: 40px 10px;
 	}
-	header nav.nav-transparent .header-text .text-large {
+
+	header nav.nav-expanded .header-text .text-large {
 		font-size: 48px;
 	}
+
 	nav .nav-wrapper {
 		height: 150px;
 	}
+
 	main {
 		margin-top: 100px;
 	}
+
 	.section {
 		margin: 80px 0px 0px 0px;
 		padding: 0px;
 	}
+
 	.sidenav {
 		width: 200px;
 	}
